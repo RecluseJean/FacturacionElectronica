@@ -33,7 +33,6 @@ const routesDash : Routes = [
       { path: 'administracion', redirectTo: 'administracion/usuarios', pathMatch: 'full' },  
       { path: 'monitoreo', redirectTo: 'monitoreo', pathMatch: 'full' }, 
 
-    //  { path: 'administracion/gestion-paginas', component: GestionPaginasComponent},
       { path: 'ingresos/plantilla-documento', component: PlantillasDocumentosComponent},
       { path: 'ingresos/percepcion', component: PercepcionComponent},
       { path: 'ingresos/facturador', component: FacturadorComponent},
