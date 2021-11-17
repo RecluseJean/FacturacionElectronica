@@ -1,1 +1,103 @@
-<p>cliente works!</p>
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Catálogos</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Cliente</a></li>            
+        </ol>
+    </div>
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-row">  
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <app-listado-busqueda></app-listado-busqueda> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <form>  
+                    <div class="form-row">
+                        <div class="col-sm-3 mt-2 mt-sm-2">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <input type="text" class="form-control" placeholder="Buscar Aquí...">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="col-sm-3 mt-2 mt-sm-2">
+                            <select class="form-control default-select col-sm-12" id="sel1" disabled>
+                                <option selected disabled>Luguer Asociados</option>                                                                
+                            </select>   
+                        </div>                        
+
+                        <div class="col-sm-3 mt-2 mt-sm-2">
+                            <a type="button" class="btn btn-info col-sm-12">Crear Documento <span
+                                class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                            </a> 
+                        </div> 
+                                
+                        <div class="col-sm-3 mt-2 mt-sm-2">
+                            <button type="button" class="btn btn-info">Exportar <span
+                                class="btn-icon-right"><i class="fa fa-cloud-download"></i></span>
+                            </button> 
+                        </div>   
+
+                        
+                        
+                    </div>
+                </form>      
+            </div>
+            <div class="card-body">
+                <div class="table-responsive table-hover">
+                    <table class="table">
+                        <thead class="thead-info">
+                            <tr>
+                                <th scope="col">Fecha emisión</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Serio-Número</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Moneda</th>
+                                <th scope="col">T.Gravada</th>
+                                <th scope="col">T.IGV</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Descargas</th>
+                                <th scope="col">Consultar Estado</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <th>1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+
+                                <td>
+                                    <div class="d-flex">
+                                        <a class="btn btn-primary shadow btn-xs sharp mr-1" routerLink="/dashboard/ingresos/percepcion/editar-percepcion"><i class="fa fa-pencil"></i></a>
+                                        <a class="btn btn-danger shadow btn-xs sharp" data-toggle="modal" data-target="#elimarc"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
