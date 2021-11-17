@@ -9,6 +9,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { DashboardComponent } from './dashboard.component';
 
 import { PlantillasDocumentosComponent } from './ingresos/plantillas-documentos/plantillas-documentos.component';
+import { GenerarDocumentoComponent } from './ingresos/plantillas-documentos/generar-documento/generar-documento.component';
+import { EditarDocumentoComponent } from './ingresos/plantillas-documentos/editar-documento/editar-documento.component';
+
 import { PercepcionComponent } from './ingresos/percepcion/percepcion.component';
 import { FacturadorComponent } from './ingresos/facturador/facturador.component';
 
@@ -31,6 +34,7 @@ import { MonitoreoComponent } from './monitoreo/monitoreo.component';
     DashboardComponent,
 
     PlantillasDocumentosComponent,
+    GenerarDocumentoComponent,
     PercepcionComponent,
     FacturadorComponent,
 
@@ -45,7 +49,8 @@ import { MonitoreoComponent } from './monitoreo/monitoreo.component';
     LocalComponent,
     EmpresasComponent,
 
-    MonitoreoComponent,    
+    MonitoreoComponent,
+      EditarDocumentoComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,487 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Ingresos</a></li>
+            <li class="breadcrumb-item"><a  routerLink="/dashboard/ingresos/plantilla-documento">Plantilla de Documento</a></li>    
+            <li class="breadcrumb-item active"><a routerLink="/dashboard/ingresos/plantilla-documento/editar-documento">Editar Documento</a></li>
+        </ol>
+    </div>       
+
+    <div class="col-xl-12">
+        <div class="card text-center">
+            <div class="card-header">
+                <h5 class="card-title">Nombre de la Empresa</h5>
+            </div>
+            <div class="card-body">
+                <div class="basic-form">
+                    <form>                           
+                        <div class="form-row">            
+                            <div class="form-group col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Cliente</label>
+                                    
+                                    <div class="col-sm-9">
+                                        <select class="form-control default-select" id="sel1">
+                                            <option selected>Selecciona un Cliente</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                        </select>                                                                        
+                                    </div>
+                                </div>                                    
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#nuevocliente">Nuevo Cliente<span
+                                            class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                                        </button>                                                                         
+                                    </div>
+                                </div>                                     
+                            </div>
+                            
+                            <div class="form-group col-md-6">                                    
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Dirección</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>                                     
+                            </div>
+            
+                            <div class="form-group col-md-6">                                  
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Teléfono</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div> 
+                            </div>
+            
+                            <div class="form-group col-md-6">                                    
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Moneda</label>                                        
+                                    <div class="col-sm-9">
+                                        <select class="form-control default-select" id="sel1">
+                                            <option selected>Selecciona un Tipo de Moneda</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                        </select>                                                                        
+                                    </div>
+                                </div>                                     
+                            </div>
+            
+                            <div class="form-group col-md-6">                                  
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Operación</label>                                        
+                                    <div class="col-sm-9">
+                                        <select class="form-control default-select" id="sel1">
+                                            <option selected>Selecciona un Tipo de Operación</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                        </select>                                                                        
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>                            
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-12">
+        <div class="card text-center">
+            <div class="card-header">
+                <h5 class="card-title">Lista</h5>
+                <a type="button" class="btn btn-success">Agregar Línea <span
+                    class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                </a>  
+            </div>
+            <div class="card-body">
+                <div class="table-responsive table-hover">
+                    <table class="table">
+                        <thead class="thead-info">
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th></th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Unid. de Medida</th>
+                                <th scope="col">IGV</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Remover</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <select class="form-control default-select" id="sel1">
+                                        <option selected disabled>Buscar Item Facturable</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                    </select>
+                                </td>
+                                <td>  
+                                    <a type="button" class="btn btn-success" data-toggle="modal" data-target="#nuevoproducto">Nuevo Producto <span
+                                        class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                                    </a>
+                                </td>
+                                <td>S/100</td>
+                                <td>
+                                    <select class="form-control default-select" id="sel1">
+                                        <option selected disabled>Selecciona</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    18
+                                </td>
+                                <td>Servicio Contable</td>
+                                <td>1</td>
+                                <td>118</td>
+
+                                <td>
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form-row mt-4">   
+                    <div class="col-sm-1 mt-2 mt-sm-2">                                                                                           
+                    </div>   
+                    <div class="col-sm-4 mt-2 mt-sm-2 text-right">
+                        <div class="form-group row">
+                            <textarea class="form-control col-sm-12" style="height:200px" placeholder="Observaciones"></textarea>                            
+                        </div>                                                                    
+                    </div> 
+                                                       
+                    <div class="col-sm-1 mt-2 mt-sm-2">                                                                                           
+                    </div>     
+
+                    <div class="col-sm-5 mt-2 mt-sm-2  text-right">
+                        <div class="form-group row">
+                            <div class="col-sm-12 mt-2 mt-sm-2">
+                                <label class="col-sm-6 col-form-label" style="font-weight: bold;">Subtotal</label>      
+                                <label class="col-sm-6 col-form-label">S/.100</label>    
+                            </div>  
+                        </div>  
+                        <div class="form-group row">
+                            <div class="col-sm-12 mt-2 mt-sm-2">
+                                <label class="col-sm-6 col-form-label" style="font-weight: bold;">IGV(18%)</label> 
+                                <label class="col-sm-6 col-form-label">S/.18</label>
+                            </div>  
+                        </div> 
+                        <div class="form-group row">
+                            <div class="col-sm-12 mt-2 mt-sm-2">
+                                <label class="col-sm-6 col-form-label" style="font-weight: bold;">Total Descuento</label>   
+                                <label class="col-sm-6 col-form-label">0</label>
+                            </div>  
+                        </div>  
+                        <hr>    
+                        <div class="form-group row">
+                            <div class="col-sm-12 mt-2 mt-sm-2">
+                                <label class="col-sm-6 col-form-label" style="font-weight: bold; font-size: 25px;">TOTAL</label>   
+                                <label class="col-sm-6 col-form-label" style="font-weight: bold; font-size: 25px;">S/118</label>
+                            </div>  
+                        </div>                                                                                                
+                    </div>    
+                    
+                    <div class="col-sm-1 mt-2 mt-sm-2">                                                                                           
+                    </div>                                                                                                                  
+                </div>
+
+                <div class="form-row mt-12">
+                    <div class="col-sm-3 mt-2 mt-sm-3">                                                                                           
+                    </div>     
+                    <button type="button" class="btn btn-success col-sm-2 mt-2 mt-sm-2" data-toggle="modal" data-target="#actualizardoc">Actualizar
+                        <span class="btn-icon-right"><i class="fa fa-check"></i></span>
+                    </button>   
+                    <div class="col-sm-1 mt-2 mt-sm-2">                                                                                           
+                    </div>                 
+                    <button type="button" class="btn btn-danger col-sm-2 mt-2 mt-sm-2">Cancelar
+                        <span class="btn-icon-right"><i class="fa fa-times"></i></span>
+                    </button>  
+                    <div class="col-sm-3 mt-2 mt-sm-3">                                                                                           
+                    </div>                                                       
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Modal Nuevo Cliente -->
+    <div class="modal fade" id="nuevocliente">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo Cliente</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <div class="col-sm-6 mt-2 mt-sm-2 text-right">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
+                                <label class="form-check-label">
+                                    Nacional
+                                </label>
+                            </div>  
+                        </div>  
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" value="option2">
+                                <label class="form-check-label">
+                                    Extranjero
+                                </label>
+                            </div>   
+                        </div> 
+                    </div> 
+
+                    <div class="form-group row">                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Tipo de Documento</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select>                                                                        
+                        </div>
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="RUC/DNI">                                                                        
+                        </div>
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Razón Social">
+                        </div>                        
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Razón Comercial">
+                        </div>  
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Cuenta Detracción">
+                        </div>                       
+                    </div>
+                    <!--Solo si es Nacional-->
+                    <div class="form-group row">                        
+                        <div class="col-sm-4 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Departamento</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select> 
+                        </div>  
+                        <div class="col-sm-4 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Provincia</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select>                         
+                        </div>    
+                        <div class="col-sm-4 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Distrito</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select>                         
+                        </div>                   
+                    </div>
+                    <!--Fin Solo si es Nacional-->
+                    
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Dirección Fiscal">
+                        </div>                        
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Dirección Fiscal 2">
+                        </div>                        
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Dirección Fiscal 3">
+                        </div>                        
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="email" placeholder="Email">
+                        </div>  
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Condición" disabled>
+                        </div>                       
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="number" placeholder="Tel. Fijo">
+                        </div>  
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="number" placeholder="Num. Celular">
+                        </div>                       
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="password" placeholder="Contraseña para consulta">
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregarcli" >Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Nuevo Cliente -->
+
+    <!-- Modal Nuevo Producto -->
+    <div class="modal fade" id="nuevoproducto">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo Cliente</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Código del Producto">                                                                        
+                        </div>
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Nombre del Producto">                                                                        
+                        </div>
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Descripción del Producto">
+                        </div>                        
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Valor/Precio/Venta">
+                        </div>  
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Valor/Precio/Compra">
+                        </div>                       
+                    </div>
+
+                    <div class="form-group row">                                                   
+                        <div class="col-sm-6 mt-2 mt-sm-2">                                 
+                            <div class="custom-control custom-checkbox mb-3 checkbox-success check-lg mt-2 mt-sm-2">
+                                <input type="checkbox" class="custom-control-input mt-2 mt-sm-2" checked id="customCheckBox8" required>
+                                <label class="custom-control-label mt-2 mt-sm-2" for="customCheckBox8">&nbsp;&nbsp; Afecto isc</label>
+                            </div>                    
+                        </div>
+                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Unidad de Medida</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select> 
+                        </div>                      
+                    </div> 
+                    <div class="form-group row"> 
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Afecto</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select> 
+                        </div>                                            
+                    </div>
+                    <div class="form-group row"> 
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Tipo de Moneda</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select> 
+                        </div>                                                  
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Descripción del Producto Sunat">
+                        </div>                        
+                    </div>
+                    
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confimarnp">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Nuevo Producto -->
+
+    <!-- Modal Confirmar Nuevo Producto -->
+    <div class="modal fade" id="agregarcli">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Agregar este Cliente?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Confirmar Nuevo Producto -->
+
+    <!-- Modal Confirmar Nuevo Producto -->
+    <div class="modal fade" id="confimarnp">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Agregar este producto?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Confirmar Nuevo Producto -->
+
+    <!-- Modal Confirmar Actualizar Documento -->
+    <div class="modal fade" id="actualizardoc">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Actualizar este Documento?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Confirmar Actualizar Documento -->
+
+</div>
