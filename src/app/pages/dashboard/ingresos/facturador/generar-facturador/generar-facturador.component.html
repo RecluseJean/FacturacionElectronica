@@ -2,13 +2,101 @@
     <div class="page-titles">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Ingresos</a></li>
-            <li class="breadcrumb-item"><a  routerLink="/dashboard/ingresos/plantilla-documento">Plantilla de Documento</a></li>    
-            <li class="breadcrumb-item active"><a routerLink="/dashboard/ingresos/plantilla-documento/generar-documento">Editar Documento</a></li>
+            <li class="breadcrumb-item"><a  routerLink="/dashboard/ingresos/percepcion">Facturador</a></li>    
+            <li class="breadcrumb-item active"><a routerLink="/dashboard/ingresos/facturador/generar-facturador">Generar Documento</a></li>
         </ol>
-    </div>   
+    </div>
 
     <div class="col-xl-12">
-        <div class="card text-center">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Generar Documento</h5>
+            </div>
+            <div class="card-body"> 
+                <div class="form-row">  
+                    <div class="col-sm-5 mt-2 mt-sm-2">
+                        <label>Tipo de Documento :</label>
+                        <select class="form-control default-select" id="sel1">
+                            <option selected>Selecciona un Tipo de Documento</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                        </select>                                                                        
+                    </div>                     
+                    <div class="col-sm-5 mt-2 mt-sm-2">
+                        <label>N° Documento :</label>
+                        <div class="form-row">
+                            <input type="text" class="form-control col-sm-3">    
+                            <input type="text" class="form-control col-sm-9">
+                        </div>
+                    </div>  
+
+                    <div class="col-sm-2 mt-4 mt-sm-4">
+                        <div class="custom-control custom-checkbox mb-3 checkbox-success check-lg mt-4 mt-sm-3">
+                            <input type="checkbox" class="custom-control-input mt-2 mt-sm-2" (click)="mostrar(1)" id="customCheckBox8" required>
+                            <label class="custom-control-label mt-2 mt-sm-2" for="customCheckBox8">Habilitar Plantilla</label>
+                        </div>   
+                    </div>  
+                    <div *ngIf="this.view" class="col-sm-4 mt-4 mt-sm-4">
+                        <label>Cliente :</label>
+                        <select class="form-control default-select" id="sel1">
+                            <option selected>Selecciona un Tipo de Documento</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                        </select>                                                                        
+                    </div>
+                    <div *ngIf="this.view" class="col-sm-4 mt-4 mt-sm-4">
+                        <label>Plantilla :</label>
+                        <select class="form-control default-select" id="sel1">
+                            <option selected>Selecciona un Tipo de Documento</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                        </select>                                                                        
+                    </div>                   
+
+                </div>                 
+            </div>  
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" routerLink="/dashboard/ingresos/facturador">Regresar</button>
+                <button type="button" class="btn btn-primary" (click)="mostrar(2)">Continuar</button>
+            </div>      
+        </div>
+    </div> 
+
+    <div class="col-lg-12 col-xl-12" *ngIf="this.viewt">
+        <div class="card">
+            <div class="card-body">
+                <div class="row m-b-30">   
+                    <div class="col-md-2 col-xxl-12">
+                    </div>                 
+                    <div class="col-md-4 col-xxl-12">
+                        <div class="new-arrival-product mb-4 mb-xxl-4 mb-md-0">
+                            <div class="new-arrivals-img-contnent">
+                                <img class="img-fluid" src="../../../../../../assets/images/empresa.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xxl-12">
+                        <div class="new-arrival-content position-relative mt-4">
+                            <div class="comment-review star-rating">
+                                <h2><a href="ecom-product-detail.html">LUGER ASOCIADOS S.R.L.</a></h2>
+                            </div>
+                            <p style="font-size: 20px;">Identificación: <span class="item" style="font-size: 20px;"> 20602345417 <i class="fa fa-check-circle text-success"></i></span></p>
+                            <p>                                
+                                LUGER ASOCIADOS S.R.L.
+                                20602345417
+                                AV. ARQUITECTO RICARDO MALACHOSWSKY N° 340 DPTO 401 - TORRES DE LIMATAMBO - SAN BORJA
+                                lsanchez@lugerasociados.com - 986265805
+                            </p>
+                            <p style="font-size: 20px;">N°. <span class="item" style="font-size: 20px;"> B111-0001111 </span></p>
+                        </div>
+                    </div>                     
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="col-xl-12" *ngIf="this.viewt">
+        <div class="card">
             <div class="card-header">
                 <h5 class="card-title">Nombre de la Empresa</h5>
             </div>
@@ -56,6 +144,24 @@
                                     </div>
                                 </div> 
                             </div>
+
+                            <div class="form-group col-md-6">                                  
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Fecha Documento</label>
+                                    <div class="col-sm-9">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="form-group col-md-6">                                  
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Fecha Vencimiento</label>
+                                    <div class="col-sm-9">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div> 
+                            </div>
             
                             <div class="form-group col-md-6">                                    
                                 <div class="form-group row">
@@ -72,16 +178,50 @@
             
                             <div class="form-group col-md-6">                                  
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Operación</label>                                        
+                                    <label class="col-sm-3 col-form-label">Tipo de Cambio</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="form-group col-md-4">                                    
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Tipo de operación</label>                                        
                                     <div class="col-sm-9">
                                         <select class="form-control default-select" id="sel1">
-                                            <option selected>Selecciona un Tipo de Operación</option>
+                                            <option selected>Selecciona un Tipo de operación</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
                                         </select>                                                                        
                                     </div>
-                                </div> 
+                                </div>                                     
                             </div>
+
+                            <div class="form-group col-md-2">                                    
+                                <div class="custom-control custom-checkbox mb-3 checkbox-success check-lg mt-4 mt-sm-3">
+                                    <input type="checkbox" class="custom-control-input mt-2 mt-sm-2" id="customCheckBox1" required>
+                                    <label class="custom-control-label mt-2 mt-sm-2" for="customCheckBox1">Habilitar ISC</label>
+                                </div>   
+                            </div> 
+                            <div class="form-group col-md-2">                                    
+                                <div class="custom-control custom-checkbox mb-3 checkbox-success check-lg mt-4 mt-sm-3">
+                                    <input type="checkbox" class="custom-control-input mt-2 mt-sm-2" id="customCheckBox2" required>
+                                    <label class="custom-control-label mt-2 mt-sm-2" for="customCheckBox2">Descuento</label>
+                                </div>   
+                            </div> 
+                            <div class="form-group col-md-2">                                    
+                                <div class="custom-control custom-checkbox mb-3 checkbox-success check-lg mt-4 mt-sm-3">
+                                    <input type="checkbox" class="custom-control-input mt-2 mt-sm-2" id="customCheckBox3" required>
+                                    <label class="custom-control-label mt-2 mt-sm-2" for="customCheckBox3">Percepción</label>
+                                </div>   
+                            </div> 
+                            <div class="form-group col-md-2">                                    
+                                <div class="custom-control custom-checkbox mb-3 checkbox-success check-lg mt-4 mt-sm-3">
+                                    <input type="checkbox" class="custom-control-input mt-2 mt-sm-2" id="customCheckBox4" required>
+                                    <label class="custom-control-label mt-2 mt-sm-2" for="customCheckBox4">Regulación de Anticipos</label>
+                                </div>   
+                            </div> 
                         </div>                            
                     </form>
                 </div>
@@ -89,13 +229,21 @@
         </div>
     </div>
 
-    <div class="col-xl-12">
-        <div class="card text-center">
+    <div class="col-xl-12" *ngIf="this.viewt">
+        <div class="card">
             <div class="card-header">
                 <h5 class="card-title">Lista</h5>
-                <a type="button" class="btn btn-success">Agregar Línea <span
-                    class="btn-icon-right"><i class="fa fa-plus"></i></span>
-                </a>  
+                <div class="">
+                    <button type="button" class="btn btn-info light mr-1" >Agregar Línea<span
+                        class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                    </button>
+                    <button type="button" class="btn btn-success light mr-1" *ngIf="this.viewbmp" (click)="mostrar(3)">Método de Pago<span
+                        class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                    </button>
+                    <button type="button" class="btn btn-secondary light" *ngIf="this.viewbad" (click)="mostrar(4)">Agregar Detracción<span
+                        class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                    </button>
+                </div>                
             </div>
             <div class="card-body">
                 <div class="table-responsive table-hover">
@@ -106,11 +254,13 @@
                                 <th></th>
                                 <th scope="col">Precio</th>
                                 <th scope="col">Unid. de Medida</th>
+                                <th scope="col">Tipo afecto</th>
+                                <th scope="col">ISC</th>
                                 <th scope="col">IGV</th>
                                 <th scope="col">Descripción</th>
                                 <th scope="col">Cantidad</th>
                                 <th scope="col">Total</th>
-                                <th scope="col">Remover</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -123,8 +273,7 @@
                                     </select>
                                 </td>
                                 <td>  
-                                    <a type="button" class="btn btn-success" data-toggle="modal" data-target="#nuevoproducto">Nuevo Producto <span
-                                        class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                                    <a type="button" class="btn btn-success" data-toggle="modal" data-target="#nuevoproducto">Nuevo
                                     </a>
                                 </td>
                                 <td>S/100</td>
@@ -136,15 +285,21 @@
                                     </select>
                                 </td>
                                 <td>
-                                    18
+                                    <select class="form-control default-select" id="sel1">
+                                        <option selected disabled>Selecciona</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                    </select>
                                 </td>
-                                <td>Servicio Contable</td>
+                                <td>1</td>
                                 <td>1</td>
                                 <td>118</td>
+                                <td>3</td>
+                                <td>500</td>
 
                                 <td>
                                     <div class="text-center">
-                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                        <a class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
                                     </div>
                                 </td>
                             </tr>                            
@@ -152,37 +307,103 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="form-row mt-4">   
-                    <div class="col-sm-1 mt-2 mt-sm-2">                                                                                           
-                    </div>   
-                    <div class="col-sm-4 mt-2 mt-sm-2 text-right">
+                
+                <hr *ngIf="this.viewmp">
+                <div class="form-row mt-5" *ngIf="this.viewmp"> 
+                    <div class="form-group col-md-3">                                    
                         <div class="form-group row">
-                            <textarea class="form-control col-sm-12" style="height:200px" placeholder="Observaciones"></textarea>                            
-                        </div>                                                                    
-                    </div> 
-                                                       
-                    <div class="col-sm-1 mt-2 mt-sm-2">                                                                                           
-                    </div>     
+                            <div class="col-sm-12">
+                                <select class="form-control default-select" id="sel1">
+                                    <option selected>Método de Pago</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                </select>                                                                        
+                            </div>
+                        </div>                       
+                    </div>    
+                    <div class="form-group col-md-3">                                  
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder="Fecha" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                            </div>
+                        </div> 
+                    </div>  
+                    <div class="form-group col-md-3">                                    
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder="Referencia">
+                            </div>
+                        </div>                                     
+                    </div>
+    
+                    <div class="form-group col-md-2 mr-auto">                                  
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="number" class="form-control" placeholder="Monto">
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="form-group col-md-1">   
+                        <button type="button" class="btn btn-danger light" (click)="mostrar(5)"><i class="fa fa-trash"></i>
+                        </button> 
+                    </div>
+                </div>     
+                
+                <br>
+                <hr *ngIf="this.viewad">
+                <div class="form-row mt-5" *ngIf="this.viewad">  
+                    <div class="col-sm-4 mt-2 mt-sm-2">
+                        <label>Detracción Sugerida :</label>
+                        <select class="form-control default-select" id="sel1">
+                            <option selected>Selecciona</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                        </select>                                                                        
+                    </div>                     
+                    <div class="col-sm-3 mt-2 mt-sm-2 mr-1">
+                        <label>Valor :</label>
+                        <div class="form-row">
+                            <input type="text" class="form-control col-sm-12">
+                        </div>
+                    </div>  
 
+                    <div class="col-sm-3 mt-2 mt-sm-2 mr-auto">
+                        <label>Detracción :</label>
+                        <div class="form-row">
+                            <input type="text" class="form-control col-sm-12">
+                        </div>
+                    </div>  
+                    
+                    <div class="col-sm-1 mt-4 mt-sm-4">
+                        <button type="button" class="btn btn-danger light mt-4 mt-sm-3" (click)="mostrar(6)"><i class="fa fa-trash"></i>
+                        </button> 
+                    </div>
+
+                </div> 
+
+                <br>
+                <hr>
+                <div class="form-row mt-4" >                     
+                    <div class="col-sm-7">
+                    </div>
                     <div class="col-sm-5 mt-2 mt-sm-2  text-right">
                         <div class="form-group row">
                             <div class="col-sm-12 mt-2 mt-sm-2">
                                 <label class="col-sm-6 col-form-label" style="font-weight: bold;">Subtotal</label>      
-                                <label class="col-sm-6 col-form-label">S/.100</label>    
-                            </div>  
-                        </div>  
-                        <div class="form-group row">
-                            <div class="col-sm-12 mt-2 mt-sm-2">
+                                <label class="col-sm-6 col-form-label">S/.100</label> 
                                 <label class="col-sm-6 col-form-label" style="font-weight: bold;">IGV(18%)</label> 
-                                <label class="col-sm-6 col-form-label">S/.18</label>
-                            </div>  
-                        </div> 
-                        <div class="form-group row">
-                            <div class="col-sm-12 mt-2 mt-sm-2">
+                                <label class="col-sm-6 col-form-label">S/.18</label>   
+                                <label class="col-sm-6 col-form-label" style="font-weight: bold;">ISC</label> 
+                                <label class="col-sm-6 col-form-label"></label>
+                                <label class="col-sm-6 col-form-label" style="font-weight: bold;">Percepción</label> 
+                                <label class="col-sm-6 col-form-label">S/</label>
+                                <label class="col-sm-6 col-form-label" style="font-weight: bold;">Descuento Global</label> 
+                                <label class="col-sm-6 col-form-label">S/</label>
                                 <label class="col-sm-6 col-form-label" style="font-weight: bold;">Total Descuento</label>   
                                 <label class="col-sm-6 col-form-label">0</label>
                             </div>  
-                        </div>  
+                          
+                        </div>                         
                         <hr>    
                         <div class="form-group row">
                             <div class="col-sm-12 mt-2 mt-sm-2">
@@ -190,12 +411,20 @@
                                 <label class="col-sm-6 col-form-label" style="font-weight: bold; font-size: 25px;">S/118</label>
                             </div>  
                         </div>                                                                                                
-                    </div>    
-                    
-                    <div class="col-sm-1 mt-2 mt-sm-2">                                                                                           
-                    </div>                                                                                                                  
+                    </div>                                                                                                                                                         
                 </div>
-                <div class="form-row mt-12">
+
+                <div class="form-row mt-4">   
+                    <div class="col-sm-6">
+                        <textarea class="form-control col-sm-12" style="height:200px" placeholder="Términos y Condiciones"></textarea>                            
+                    </div>         
+                    <div class="col-sm-6">
+                        <textarea class="form-control col-sm-12" style="height:200px" placeholder="Notas"></textarea>                            
+                    </div>         
+                </div>       
+               
+              
+                <div class="form-row mt-5">
                     <div class="col-sm-3 mt-2 mt-sm-3">                                                                                           
                     </div>     
                     <button type="button" class="btn btn-success col-sm-2 mt-2 mt-sm-2" data-toggle="modal" data-target="#documentonp">Actualizar
@@ -203,7 +432,7 @@
                     </button>   
                     <div class="col-sm-1 mt-2 mt-sm-2">                                                                                           
                     </div>                 
-                    <button type="button" class="btn btn-danger col-sm-2 mt-2 mt-sm-2" routerLink="/dashboard/ingresos/plantilla-documento">Cancelar
+                    <button type="button" class="btn btn-danger col-sm-2 mt-2 mt-sm-2" routerLink="/dashboard/ingresos/facturador">Cancelar
                         <span class="btn-icon-right"><i class="fa fa-times"></i></span>
                     </button>  
                     <div class="col-sm-3 mt-2 mt-sm-3">                                                                                           
@@ -213,7 +442,6 @@
         </div>
     </div>
 
-    
     <!-- Modal Nuevo Cliente -->
     <div class="modal fade" id="nuevocliente">
         <div class="modal-dialog">
@@ -346,7 +574,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Nuevo Cliente</h5>
+                    <h5 class="modal-title">Nuevo Producto</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
                 </div>
@@ -461,25 +689,5 @@
         </div>
     </div>
     <!-- Fin Modal Confirmar Nuevo Producto -->
-
-    <!-- Modal Confirmar Nuevo Documento -->
-    <div class="modal fade" id="documentonp">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Confirmar</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">¿Desea Actualizar este Documento?</div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fin Modal Confirmar Nuevo Documento -->
-
 
 </div>

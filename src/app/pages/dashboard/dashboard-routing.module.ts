@@ -7,7 +7,10 @@ import { PlantillasDocumentosComponent } from './ingresos/plantillas-documentos/
 import { GenerarDocumentoComponent } from './ingresos/plantillas-documentos/generar-documento/generar-documento.component';
 import { EditarDocumentoComponent } from './ingresos/plantillas-documentos/editar-documento/editar-documento.component';
 import { PercepcionComponent } from './ingresos/percepcion/percepcion.component';
+import { GenerarPercepcionComponent } from './ingresos/percepcion/generar-percepcion/generar-percepcion.component';
+import { EditarPercepcionComponent } from './ingresos/percepcion/editar-percepcion/editar-percepcion.component';
 import { FacturadorComponent } from './ingresos/facturador/facturador.component';
+import { GenerarFacturadorComponent } from './ingresos/facturador/generar-facturador/generar-facturador.component';
 
 import { CargaMasivaComponent } from './carga-masiva/carga-masiva.component';
 
@@ -39,7 +42,11 @@ const routesDash : Routes = [
       { path: 'ingresos/plantilla-documento/generar-documento', component: GenerarDocumentoComponent},
       { path: 'ingresos/plantilla-documento/editar-documento', component: EditarDocumentoComponent},
       { path: 'ingresos/percepcion', component: PercepcionComponent},
+      { path: 'ingresos/percepcion/generar-percepcion', component: GenerarPercepcionComponent},
+      { path: 'ingresos/percepcion/editar-percepcion', component: EditarPercepcionComponent},
       { path: 'ingresos/facturador', component: FacturadorComponent},
+      { path: 'ingresos/facturador/generar-facturador', component: GenerarFacturadorComponent},
+
 
       { path: 'carga/documentos', component: CargaMasivaComponent},
 

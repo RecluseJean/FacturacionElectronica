@@ -1,0 +1,485 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Ingresos</a></li>
+            <li class="breadcrumb-item"><a  routerLink="/dashboard/ingresos/percepcion">Percepción</a></li>    
+            <li class="breadcrumb-item active"><a routerLink="/dashboard/ingresos/percepcion/generar-percepcion">Generar Percepción</a></li>
+        </ol>
+    </div>
+    <div class="col-lg-12 col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row m-b-30">   
+                    <div class="col-md-2 col-xxl-12">
+                    </div>                 
+                    <div class="col-md-4 col-xxl-12">
+                        <div class="new-arrival-product mb-4 mb-xxl-4 mb-md-0">
+                            <div class="new-arrivals-img-contnent">
+                                <img class="img-fluid" src="../../../../../../assets/images/empresa.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xxl-12">
+                        <div class="new-arrival-content position-relative mt-5">
+                            <div class="comment-review star-rating">
+                                <h2><a href="ecom-product-detail.html">LUGER ASOCIADOS S.R.L.</a></h2>
+                            </div>
+                            <p style="font-size: 20px;">Identificación: <span class="item" style="font-size: 20px;"> 20602345417 <i class="fa fa-check-circle text-success"></i></span></p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-xxl-12">
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="col-xl-12">
+        <div class="card text-center">
+            <div class="card-header">
+                <h5 class="card-title">Nueva Percepción</h5>
+            </div>
+            <div class="card-body">
+                <div class="basic-form">
+                    <form>                           
+                        <div class="form-row">   
+                           
+                            <div class="form-group col-md-6">                                    
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label text-left">Fecha de Emisión</label> 
+                                    <div class="col-sm-9">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>                                     
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label text-left">Cliente</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control default-select" id="sel1">
+                                            <option selected>Selecciona un Cliente</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                        </select>                                                                        
+                                    </div>
+                                </div>                                    
+                            </div>
+                            
+                            <div class="form-group col-md-6">                                  
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label text-left">Regimen de Percepción</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control default-select" id="sel1">
+                                            <option selected>Selecciona un regimen</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                        </select>                                                                        
+                                    </div>
+                                </div> 
+                            </div>
+            
+                            <div class="form-group col-md-6">                                    
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label text-left">Valor Retención</label> 
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>                                     
+                            </div>
+            
+                            <div class="form-group col-md-12">                                  
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label text-left">Observaciónes</label> 
+                                    <div class="col-sm-9">
+                                        <textarea type="text" class="form-control" placeholder="Ingrese una observación"></textarea>                                                                   
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>                            
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Relación de Documentos Relacionados</h4>
+                <form>  
+                    <div class="form-row">       
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#anadirdat">Añadir <span
+                            class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                        </button>
+                    </div>
+                </form>      
+            </div>
+            <div class="card-body">
+                <div class="table-responsive table-hover">
+                    <table class="table">
+                        <thead class="thead-info">
+                            <tr>
+                                <th scope="col">Tipo Documento</th>
+                                <th scope="col">Serie</th>
+                                <th scope="col">Número</th>
+                                <th scope="col">Fecha de emisión</th>
+                                <th scope="col">Total comprobante</th>
+                                <th scope="col">Nro. de Cobro</th>
+                                <th scope="col">Importe de Cobro</th>
+                                <th scope="col">Tasa %</th>
+                                <th scope="col">Percepcion S/</th>
+                                <th scope="col">Importe neto cobrado S/</th>
+                                <th scope="col">Acciones</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Factura</th>
+                                <td>F999</td>
+                                <td>0000888</td>
+                                <td>24/08/2020	</td>
+                                <td>1.18</td>
+                                <td>565</td>
+                                <td>65656</td>
+                                <td>%</td>
+                                <td>595</td>
+                                <td>656</td>
+
+                                <td>
+                                    <div class="d-flex">
+                                        <a class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="modal" data-target="#actanadir"><i class="fa fa-pencil"></i></a>
+                                        <a class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>                            
+                        </tbody>
+                    </table>                    
+                </div>
+                <div class="form-row mt-5">   
+                    <div class="col-sm-5 mt-2 mt-sm-2 text-left">
+                        <div class="form-group row">
+                            <div class="col-sm-12 mt-2 mt-sm-2">
+                                <label class="col-sm-6 col-form-label" style="font-weight: bold;">Total percibido</label>      
+                                <label class="col-sm-6 col-form-label">S/.595</label>    
+                            </div>  
+                        </div>                                
+                        <hr>    
+                        <div class="form-group row">
+                            <div class="col-sm-12 mt-2 mt-sm-2">
+                                <label class="col-sm-6 col-form-label" style="font-weight: bold; font-size: 22px;">TOTAL COBRADO</label>   
+                                <label class="col-sm-6 col-form-label" style="font-weight: bold; font-size: 22px;">S/656</label>
+                            </div>  
+                        </div>                                                                                                
+                    </div>     
+                    
+                    <div class="col-sm-7 mt-4 mt-sm-4">
+                        <div class="form-group row mt-4 mt-sm-4">
+                            <div class="col-sm-4 mt-4 mt-sm-4 mr-auto">                                                                                           
+                            </div>  
+                            <button type="button" class="btn btn-success mt-4 mt-sm-4 mr-1" data-toggle="modal" data-target="#documentonp">Guardar
+                                <span class="btn-icon-right"><i class="fa fa-check"></i></span>
+                            </button>   
+                                  
+                            <button type="button" class="btn btn-danger mt-4 mt-sm-4" routerLink="/dashboard/ingresos/percepcion">Cancelar
+                                <span class="btn-icon-right"><i class="fa fa-times"></i></span>
+                            </button>
+                        </div>  
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal DATOS -->
+    <div class="modal fade" id="anadirdat">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">DATOS DEL COMPROBANTE RELACIONADO (COBRO)</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">     
+                    <div class="form-group row">                               
+                        <label class="col-sm-12 mt-2 mt-sm-2 col-form-label" style="font-weight: bold;">DATOS DEL COMPROBANTE</label> 
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Tipo de Documento</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select>                                                                        
+                        </div>
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text">  
+                        </div>
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">                            
+                            <input type="text" class="form-control" placeholder="Fecha de Emisión" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                        </div>            
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Importe Total del Comprobante">
+                        </div>                
+                    </div>
+                    <div class="form-group row">  
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Tipo de Moneda">
+                        </div>            
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Importe de la Operación">
+                        </div>   
+                    </div>
+
+                    <div class="form-group row">                               
+                        <label class="col-sm-12 mt-2 mt-sm-2 col-form-label text-center">¿Exiten notas de crédito que modifican al comprobante del pago?</label> 
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6 mt-2 mt-sm-2 text-right">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
+                                <label class="form-check-label">
+                                    Sí
+                                </label>
+                            </div>  
+                        </div>  
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" value="option2">
+                                <label class="form-check-label">
+                                    No
+                                </label>
+                            </div>   
+                        </div> 
+                    </div> 
+
+                    <hr>
+
+                    <div class="form-group row">                               
+                        <label class="col-sm-12 mt-2 mt-sm-2 col-form-label" style="font-weight: bold;">DATOS DEL COBRO</label> 
+                    </div>
+    
+                    <div class="form-group row">   
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input type="text" class="form-control" placeholder="Fecha Cobro" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                        </div>                     
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Tipo de Moneda</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select>                                                                        
+                        </div>
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Nro. Correlativo de Cobro">
+                        </div>
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Tipo de Cambio">  
+                        </div>
+                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Importe de Cobro">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group row">                               
+                        <label class="col-sm-12 mt-2 mt-sm-2 col-form-label" style="font-weight: bold;">DATOS DE LA PERCEPCION</label> 
+                    </div>
+    
+                    <div class="form-group row">   
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Importe de Recibido">  
+                        </div>
+
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Tipo de Moneda</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select>                                                                        
+                        </div>
+
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input type="text" class="form-control" placeholder="Fecha Retención" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                        </div>   
+                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Importe Neto Cobrado">
+                        </div>
+                    </div>                                      
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Añadir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal DATOS -->
+    
+    <!-- Modal Editar DATOS -->
+    <div class="modal fade" id="actanadir">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">DATOS DEL COMPROBANTE RELACIONADO (COBRO)</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">     
+                    <div class="form-group row">                               
+                        <label class="col-sm-12 mt-2 mt-sm-2 col-form-label" style="font-weight: bold;">DATOS DEL COMPROBANTE</label> 
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Tipo de Documento</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select>                                                                        
+                        </div>
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text">  
+                        </div>
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">                            
+                            <input type="text" class="form-control" placeholder="Fecha de Emisión" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                        </div>            
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Importe Total del Comprobante">
+                        </div>                
+                    </div>
+                    <div class="form-group row">  
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Tipo de Moneda">
+                        </div>            
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Importe de la Operación">
+                        </div>   
+                    </div>
+
+                    <div class="form-group row">                               
+                        <label class="col-sm-12 mt-2 mt-sm-2 col-form-label text-center">¿Exiten notas de crédito que modifican al comprobante del pago?</label> 
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6 mt-2 mt-sm-2 text-right">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
+                                <label class="form-check-label">
+                                    Sí
+                                </label>
+                            </div>  
+                        </div>  
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" value="option2">
+                                <label class="form-check-label">
+                                    No
+                                </label>
+                            </div>   
+                        </div> 
+                    </div> 
+
+                    <hr>
+
+                    <div class="form-group row">                               
+                        <label class="col-sm-12 mt-2 mt-sm-2 col-form-label" style="font-weight: bold;">DATOS DEL COBRO</label> 
+                    </div>
+    
+                    <div class="form-group row">   
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input type="text" class="form-control" placeholder="Fecha Cobro" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                        </div>                     
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Tipo de Moneda</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select>                                                                        
+                        </div>
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Nro. Correlativo de Cobro">
+                        </div>
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Tipo de Cambio">  
+                        </div>
+                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Importe de Cobro">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group row">                               
+                        <label class="col-sm-12 mt-2 mt-sm-2 col-form-label" style="font-weight: bold;">DATOS DE LA PERCEPCION</label> 
+                    </div>
+    
+                    <div class="form-group row">   
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Importe de Recibido">  
+                        </div>
+
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Tipo de Moneda</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select>                                                                        
+                        </div>
+
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input type="text" class="form-control" placeholder="Fecha Retención" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                        </div>   
+                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Importe Neto Cobrado">
+                        </div>
+                    </div>                                      
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Actualizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Editar Modal DATOS -->
+      
+    <!-- Modal Confirmar Nueva Percepcion -->
+    <div class="modal fade" id="documentonp">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Registrar el Documento #inserta el número de documento?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Confirmar Nueva Percepcion -->
+
+</div>
+
