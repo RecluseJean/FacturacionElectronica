@@ -1,1 +1,191 @@
-<p>serie works!</p>
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Administración</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Serie</a></li>
+        </ol>
+    </div>
+
+
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <ul class="nav nav-pills mb-4">
+                    
+                    <li class="nav-item mr-auto">
+                        
+                    </li>
+                    <li class="nav-item">
+                        <button data-toggle="modal" data-target=".agregarSerie" type="button" class="btn btn-rounded btn-success" style="font-size: 13px;"><span
+                            class="btn-icon-left text-primary"><i class="fa fa-user-plus" style="font-size: 20px; color: #2BC155;"></i>
+                        </span>Agregar</button>
+                    </li>                                 
+                    <li class="nav-item">
+                        <div class="input-group diet-search ml-2">
+                            <input type="text" class="form-control" placeholder="Buscar Aquí...">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </li>                    
+                </ul>
+                <!-- -->
+                <div class="table-responsive">
+                    <table class="table header-border table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <th>Serie</th>
+                                <th>Número</th>
+                                <th>Tipo de Documento</th>
+                                <th>Editar</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Admin
+                                </td>
+                                <td>Admin</td>
+                                <td>
+                                admin@mail.com
+                                </td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".editarSerie"><i class="mdi  mdi-pencil" style="font-size: 30px; color: #0B2A97;margin-left: 25%;"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".eliminarSerie"><i class="mdi mdi-delete" style="font-size: 30px; color: #0B2A97; margin-left: 45%;"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- -->
+            </div>
+            <nav>
+                <ul class="pagination pagination-gutter">
+                    <li class="page-item page-indicator">
+                        <a class="page-link" href="javascript:void()">
+                            <i class="la la-angle-left"></i></a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="javascript:void()">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">2</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">3</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">4</a></li>
+                    <li class="page-item page-indicator">
+                        <a class="page-link" href="javascript:void()">
+                            <i class="la la-angle-right"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade agregarSerie" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Agregar Serie</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-row col-12">
+                        <div class="col-12 mb-3">
+                            <label for="nroc">Username</label>
+                            <input class="form-control form-control-sm" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Nombre :</label>
+                            <input class="form-control form-control-sm" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Email :</label>
+                            <input class="form-control form-control-sm" type="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6">
+                        <div class="col-12 mb-3">
+                            <label for="ano">Contraseña :</label>
+                            <input class="form-control form-control-sm" type="password" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6">
+                        <div class="col-12 mt-1 mb-3">
+                            <label for id="mes">Repetir Contraseña :</label>
+                            <input class="form-control form-control-sm" type="password" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary light">Guardar</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div class="modal fade editarSerie" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Editar Serie</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-row col-12">
+                        <div class="col-12 mb-3">
+                            <label for="nroc">Username</label>
+                            <input class="form-control form-control-sm" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Nombre :</label>
+                            <input class="form-control form-control-sm" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Email :</label>
+                            <input class="form-control form-control-sm" type="email" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary light">Aceptar</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div class="modal fade eliminarSerie" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Eliminar Serie</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row justify-content-center">
+                    <h4>¿Seguro que desea Eliminar esta Serie?</h4>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary light" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-danger light">Eliminar</button>
+            </div>
+        </div>
+    </div> 
+</div>
