@@ -1,1 +1,661 @@
-<p>empresas works!</p>
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Administración</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Empresas</a></li>
+        </ol>
+    </div>
+
+
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <ul class="nav nav-pills mb-4">
+                    
+                    <li class="nav-item mr-auto">
+                        
+                    </li>
+                    <li class="nav-item">
+                        <button data-toggle="modal" data-target=".agregarEmpresa" type="button" class="btn btn-rounded btn-success" style="font-size: 13px;"><span
+                            class="btn-icon-left text-primary"><i class="fa fa-plus" style="font-size: 20px; color: #2BC155;"></i>
+                        </span>Agregar</button>
+                    </li>                                 
+                    <li class="nav-item">
+                        <div class="input-group diet-search ml-2">
+                            <input type="text" class="form-control" placeholder="Buscar Aquí...">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </li>                    
+                </ul>
+                <!-- -->
+                <div class="table-responsive">
+                    <table class="table header-border table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <th>Nro Doc.</th>
+                                <th>Tipo Doc.</th>
+                                <th>Nombre Comercial</th>
+                                <th>Nombre</th>
+                                <th>Dirección</th>
+                                <th>Estado</th>
+                                <th>Archivo</th>
+                                <th>Editar</th>
+                                <th>Eliminar</th>
+                                <th>Pagos</th>
+                                <th>Accesos API</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>72115599
+                                </td>
+                                <td>DNI</td>
+                                <td>Cashito SAC</td>
+                                <td>Cash</td>
+                                <td>Av. Salaverry 123</td>
+                                <td><span class="badge badge-success">Activo</span></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".cargarArchivoEmpresa"><i class="fa fa-archive" style="font-size: 30px; color: #0B2A97;margin-left: 25%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".editarEmpresa"><i class="mdi  mdi-pencil" style="font-size: 30px; color: #0B2A97;margin-left: 25%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".eliminarEmpresa"><i class="mdi mdi-delete" style="font-size: 30px; color: #0B2A97; margin-left: 45%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".registrarPagos"><i class="fa fa-money" style="font-size: 30px; color: #0B2A97;margin-left: 25%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".accesosAPI"><i class="fa fa-key" style="font-size: 30px; color: #0B2A97;margin-left: 25%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>72115599
+                                </td>
+                                <td>DNI</td>
+                                <td>Cashito SAC</td>
+                                <td>Cash</td>
+                                <td>Av. Salaverry 123</td>
+                                <td><span class="badge badge-danger">Inactivo</span></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target="#"><i class="fa fa-archive" style="font-size: 30px; color: gray;margin-left: 25%; cursor: auto;"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".editarEmpresa"><i class="mdi  mdi-pencil" style="font-size: 30px; color: #0B2A97;margin-left: 25%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".eliminarEmpresa"><i class="mdi mdi-delete" style="font-size: 30px; color: #0B2A97; margin-left: 45%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".registrarPagos"><i class="fa fa-money" style="font-size: 30px; color: #0B2A97;margin-left: 25%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="#" data-toggle="modal" data-target=".accesosAPI"><i class="fa fa-key" style="font-size: 30px; color: #0B2A97;margin-left: 25%; cursor: pointer;"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- -->
+            </div>
+            <nav>
+                <ul class="pagination pagination-gutter">
+                    <li class="page-item page-indicator">
+                        <a class="page-link" href="javascript:void()">
+                            <i class="la la-angle-left"></i></a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="javascript:void()">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">2</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">3</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">4</a></li>
+                    <li class="page-item page-indicator">
+                        <a class="page-link" href="javascript:void()">
+                            <i class="la la-angle-right"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade agregarEmpresa" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Agregar Empresa</h5>
+                <label class="btnCargarLogoEmpresa">   
+                    <input id="my-file-selector" type="file" style="display:none;"
+                    accept="image/*">                             
+                    <i class="fa fa-cloud-upload">                                    
+                    </i>&nbsp;Subir Logo de Empresa
+                </label>   
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-row col-6">
+                        <div class="col-12 mb-3">
+                            <label for="nroc">Tipo de Documento :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione el tipo de Documento</option>
+                                <option>Documento Nacional de Identidad (DNI)</option>
+                                <option>Pasaporte</option>
+                                <option>Carné de Extranjería</option>
+                                <option>Registro Único de Contribuyentes</option>
+                                <option>Otros Tipos de Documentos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-6">
+                        <div class="col-12 mb-3">
+                            <label>Documento :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su número de Documento" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Nombre :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Nombre" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Cantidad Máxima de Usuarios :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese la cantidad Máxima de Usuarios" style="font-size: 100%;" type="number" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Nombre Comercial :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Nombre Comercial" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Facturación :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione el tipo de Facturación</option>
+                                <option>Facturación PSE</option>
+                                <option>Facturación Propia</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Departamento :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione el Departamento</option>
+                                <option>Lima</option>
+                                <option>Cuzco</option>
+                                <option>Tumbes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Provincia :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione la Provincia</option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Distrito :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione el Distrito</option>
+                                <option>San Borja</option>
+                                <option>San Isidro</option>
+                                <option>Miraflores</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Dirección :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Dirección" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Usuario SOL :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Usuario SOL" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Clave SOL :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Clave SOL" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Tipo Proceso :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione su Tipo de Proceso</option>
+                                <option>Producción</option>
+                                <option>Pruebas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Teléfono Fijo :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Teléfono Fijo" style="font-size: 100%;" type="number" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Teléfono Celular :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Teléfono Celular" style="font-size: 100%;" type="number" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Página Web :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Página Web" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Email :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Email" style="font-size: 100%;" type="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Tipo de Reporte :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione su Tipo de Reporte</option>
+                                <option>Modelo A</option>
+                                <option>Modelo B</option>
+                                <option>Modelo C</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Condición :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese la Condición" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary light">Guardar</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div class="modal fade editarEmpresa" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Editar Empresa</h5>
+                <label class="btnCargarLogoEmpresa">   
+                    <input id="my-file-selector" type="file" style="display:none;"
+                    accept="image/*">                             
+                    <i class="fa fa-cloud-upload">                                    
+                    </i>&nbsp;Subir Logo de Empresa
+                </label>   
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-row col-6">
+                        <div class="col-12 mb-3">
+                            <label for="nroc">Tipo de Documento :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione el tipo de Documento</option>
+                                <option>Documento Nacional de Identidad (DNI)</option>
+                                <option>Pasaporte</option>
+                                <option>Carné de Extranjería</option>
+                                <option>Registro Único de Contribuyentes</option>
+                                <option>Otros Tipos de Documentos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-6">
+                        <div class="col-12 mb-3">
+                            <label>Documento :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su número de Documento" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Nombre :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Nombre" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Cantidad Máxima de Usuarios :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese la cantidad Máxima de Usuarios" style="font-size: 100%;" type="number" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Nombre Comercial :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Nombre Comercial" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Facturación :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione el tipo de Facturación</option>
+                                <option>Facturación PSE</option>
+                                <option>Facturación Propia</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Departamento :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione el Departamento</option>
+                                <option>Lima</option>
+                                <option>Cuzco</option>
+                                <option>Tumbes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Provincia :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione la Provincia</option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Distrito :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione el Distrito</option>
+                                <option>San Borja</option>
+                                <option>San Isidro</option>
+                                <option>Miraflores</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Dirección :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Dirección" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Usuario SOL :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Usuario SOL" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Clave SOL :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Clave SOL" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Tipo Proceso :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione su Tipo de Proceso</option>
+                                <option>Producción</option>
+                                <option>Pruebas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Teléfono Fijo :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Teléfono Fijo" style="font-size: 100%;" type="number" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Teléfono Celular :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Teléfono Celular" style="font-size: 100%;" type="number" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Página Web :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Página Web" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Email :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese su Email" style="font-size: 100%;" type="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Tipo de Reporte :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option selected="true" disabled="disabled">Seleccione su Tipo de Reporte</option>
+                                <option>Modelo A</option>
+                                <option>Modelo B</option>
+                                <option>Modelo C</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-4 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Condición :</label>
+                            <input class="form-control form-control-sm" placeholder="Ingrese la Condición" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary light">Guardar</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div class="modal fade eliminarEmpresa" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Eliminar Empresa</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row justify-content-center">
+                    <h4>¿Seguro que desea Eliminar esta Empresa?</h4>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary light" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-danger light">Eliminar</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div class="modal fade cargarArchivoEmpresa" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Cargar Archivo Empresa</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row justify-content-center">
+                    <h4>¿Seguro que desea Cargar el Archivo?</h4>
+                </div>
+                <div class="row ">
+                    <div class="col-6 text-right mt-3">
+                        <label class="btnCargarLogoEmpresa">   
+                            <input id="my-file-selector" type="file" style="display:none;"
+                            accept="image/*">                             
+                            <i class="fa fa-cloud-upload">                                    
+                            </i>&nbsp;Subir
+                        </label>
+                    </div>
+                    <div class="col-6 justify-content-center mt-3">
+                        <label class="btnCerrar" data-dismiss="modal">                         
+                            <i class="fa fa-times">                                    
+                            </i>&nbsp;Cerrar
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div class="modal fade registrarPagos" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Registro de Pagos</h5>
+                <label data-toggle="modal" data-target=".registrarPago" class="btnCargarLogoEmpresa">                            
+                    <i  class="fa fa-plus-circle" style="font-size: 120%;">                                    
+                    </i>&nbsp;&nbsp;Registrar Pago
+                </label>  
+            </div>
+            <div class="modal-body">
+                <div class="col-12" style="margin: 0;">
+            
+                    <div class="col-12 mt-3 mb-3"
+                        style="flex: 0 0 48%; margin: 0 7px 0 0;">
+                        <div class="form-row col-12 mt-3">
+                            <div class="col-6 mb-3">
+                                <label for="cod" style="font-weight: bold; color: black;">Nro. Doc. :</label>
+                                <input readonly class="form-control-plaintext form-control-plaintext-sm" type="text" id="cod">
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label for="nom" style="font-weight: bold; color: black;">Nombre Comercial :</label>
+                                <input readonly class="form-control-plaintext form-control-plaintext-sm" type="text" id="nom">
+                            </div>
+                        </div>
+                    </div>
+            
+            
+            
+                    <div class="table-responsive">
+                        <table class="table primary-table-bordered">
+                            <thead class="thead-primary">
+                                <tr>
+                                    <th scope="col">Fecha de Registro</th>
+                                    <th scope="col">Fecha de Inicio</th>
+                                    <th scope="col">Fecha de Fin</th>
+                                    <th scope="col">Meses</th>
+                                    <th scope="col">Total a Pagar</th>
+                                    <th scope="col">Deuda</th>
+                                    <th scope="col">Pagar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>01/01/2021</th>
+                                    <td>01/01/2021</td>
+                                    <td>03/01/2021</td>
+                                    <td>4</td>
+                                    <td>1000</td>
+                                    <td>10</td>
+                                    <td>100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary light" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div class="modal fade registrarPago" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Registrar Pago</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Total :</label>
+                            <input class="form-control form-control-sm" style="font-size: 100%;" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Cancelo :</label>
+                            <input class="form-control form-control-sm" style="font-size: 100%;" type="number" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary light" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success light">Aceptar</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div class="modal fade accesosAPI" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Accesos API</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Usuario :</label>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Contraseña :</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary light" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success light">Aceptar</button>
+            </div>
+        </div>
+    </div> 
+</div>
