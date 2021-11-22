@@ -25,3 +25,109 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+/* .btnSubirCV{
+  display:inline-block;
+  padding: 0.35em 1.2em;
+  border: 1px solid rgba(255,255,255,0.1);
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 110%;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 45px;
+  backdrop-filter: blur(30px);
+  color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  outline: none;
+}
+.btnSubirCV:hover{
+  background-color: #00da3b;
+  color: #fff;
+  box-shadow: 0px 15px 20px rgba(0, 218, 59, 0.45);
+  transform: translateY(-7px);
+} */
+
+.btnCargarLogoEmpresa{
+  color: white;
+  background-color: green;
+  border-radius: 15px;
+  padding: 0.35em 1.2em;
+}
+.btnCargarLogoEmpresa:hover{
+  color: white;
+  background-color: blue;
+  border-radius: 15px;
+  padding: 0.35em 1.2em;
+}
+
+.btnCerrar{
+  color: white;
+  background-color: green;
+  border-radius: 15px;
+  padding: 0.35em 1.2em;
+}
+.btnCerrar:hover{
+  color: white;
+  background-color: blue;
+  border-radius: 15px;
+  padding: 0.35em 1.2em;
+}
+
+.btnCerrar {
+  color: #fff;
+  background-color: #F94687;
+  border-color: #f12470; }
+  .btnCerrar:hover {
+    color: #fff;
+    background-color: #f51c6b;
+    border-color: #f70d62; }
+  .btnCerrar:focus, .btnCerrar.focus {
+    color: #fff;
+    background-color: #f51c6b;
+    border-color: #f70d62;
+    box-shadow: 0 0 0 0.2rem rgba(75, 202, 111, 0.5); }
+  .btnCerrar.disabled, .btnCerrar:disabled {
+    color: #fff;
+    background-color: #f51c6b;
+    border-color: #f70d62; }
+  .btnCerrar:not(:disabled):not(.disabled):active, .btnCerrar:not(:disabled):not(.disabled).active, .show > .btnCerrar.dropdown-toggle {
+    color: #fff;
+    background-color: #f51c6b;
+    border-color: #f70d62; }
+    .btnCerrar:not(:disabled):not(.disabled):active:focus, .btnCerrar:not(:disabled):not(.disabled).active:focus, .show > .btnCerrar.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(75, 202, 111, 0.5); }
+
+
+.btnCargarLogoEmpresa {
+  color: #fff;
+  background-color: #2BC155;
+  border-color: #2BC155; }
+  .btnCargarLogoEmpresa:hover {
+    color: #fff;
+    background-color: #24a247;
+    border-color: #229743; }
+  .btnCargarLogoEmpresa:focus, .btnCargarLogoEmpresa.focus {
+    color: #fff;
+    background-color: #24a247;
+    border-color: #229743;
+    box-shadow: 0 0 0 0.2rem rgba(75, 202, 111, 0.5); }
+  .btnCargarLogoEmpresa.disabled, .btnCargarLogoEmpresa:disabled {
+    color: #fff;
+    background-color: #2BC155;
+    border-color: #2BC155; }
+  .btnCargarLogoEmpresa:not(:disabled):not(.disabled):active, .btnCargarLogoEmpresa:not(:disabled):not(.disabled).active, .show > .btnCargarLogoEmpresa.dropdown-toggle {
+    color: #fff;
+    background-color: #229743;
+    border-color: #1f8d3e; }
+    .btnCargarLogoEmpresa:not(:disabled):not(.disabled):active:focus, .btnCargarLogoEmpresa:not(:disabled):not(.disabled).active:focus, .show > .btnCargarLogoEmpresa.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(75, 202, 111, 0.5); }
+
+
+
+

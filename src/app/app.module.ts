@@ -10,6 +10,7 @@ import { ComponentsModule } from './pages/components/components.module';
 import { SignInModule } from './pages/sign-in/sign-in.module';
 //Dashboard
 import { DashboardModule } from './pages/dashboard/dashboard.module';
+import { SignUpModule } from './pages/sign-up/sign-up.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DashboardModule } from './pages/dashboard/dashboard.module';
     DashboardModule,
     AppRoutingModule,
 
-    ComponentsModule
+    ComponentsModule,
+    SignUpModule
     
   ],
   providers: [],
