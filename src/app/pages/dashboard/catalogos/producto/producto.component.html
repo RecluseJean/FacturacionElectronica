@@ -1,1 +1,361 @@
-<p>producto works!</p>
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Catálogos</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Producto</a></li>            
+        </ol>
+    </div>
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-row">  
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <app-listado-busqueda></app-listado-busqueda> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">                
+
+                <div class="col-sm-0 mt-2 mt-sm-2 mr-auto">                    
+                </div>
+                <div class="col-sm-2 mt-2 mt-sm-2">
+                    <button type="button" class="btn btn-rounded btn-success col-sm-12" data-toggle="modal" data-target="#nuevoproducto">
+                        <span class="btn-icon-left text-success">
+                            <i class="fa fa-plus"></i>
+                        </span>Crear
+                    </button>                    
+                </div>        
+                <div class="col-sm-2 mt-2 mt-sm-2">
+                    <button type="button" class="btn btn-rounded btn-primary col-sm-12" data-toggle="modal" data-target="#cargarc">
+                        <span class="btn-icon-left text-primary">
+                            <i class="fa fa-cloud-upload"></i>
+                        </span>Cargar
+                    </button>     
+                </div>  
+               
+                <div class="col-sm-3 mt-2 mt-sm-2">
+                    <div class="input-group mb-2 diet-search col-sm-12">
+                        <input type="text" class="form-control" placeholder="Buscar Aquí...">
+                        <div class="input-group-append">
+                            <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive table-hover">
+                    <table class="table">
+                        <thead class="thead-info">
+                            <tr>
+                                <th scope="col">Razon Social</th>
+                                <th scope="col">Tipo Documento</th>
+                                <th scope="col">Número Documento</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Celular</th>
+                                <th scope="col">Telf. Fijo</th>
+                                <th scope="col">Acciones</th>                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>S.A.C.</th>
+                                <td>Tipo</td>
+                                <td>65656565656</td>
+                                <td>Av. los aviadores</td>
+                                <td>empresa@gmail.com</td>
+                                <td>985959595</td>
+                                <td>6262633</td>                            
+
+                                <td>
+                                    <div class="d-flex">
+                                        <a class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="modal" data-target="#editarproducto"><i class="fa fa-pencil"></i></a>
+                                        <a class="btn btn-danger shadow btn-xs sharp" data-toggle="modal" data-target="#eliminarp"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Modal Cargar-->
+    <div class="modal fade" id="cargarc">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cargar Nuevo Archivo</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="col-sm-12 mt-2 text-center">Modelo base :</h3> 
+                    <div class="col-sm-12 mt-2">
+                        <button type="button" class="btn btn-rounded btn-primary col-sm-12">
+                            <span class="btn-icon-left text-primary">
+                                <i class="fa fa-cloud-download"></i>
+                            </span>Descargar
+                        </button> 
+                    </div>       
+                        
+                    <div class="form-row">                    
+                        <div class="col-sm-6 mt-4">
+                            <button type="button" class="btn btn-rounded btn-success col-sm-12" style="overflow: hidden; position: relative;">
+                                <input class="fileInput" type="file" name="file1" accept="image/png,image/jpeg"
+                                style="cursor: pointer; height: 100%; position:absolute; top: 0; right: 0; z-index: 99; opacity: 0; -moz-opacity: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)"/>
+                                <span class="btn-icon-left text-success">
+                                    <i class="fa fa-cloud-upload"></i>
+                                </span>Subir Archivo
+                            </button>
+                        </div>
+                        <div class="col-sm-6 mt-4">
+                            <button type="button" class="btn btn-rounded btn-danger col-sm-12" data-dismiss="modal">
+                                <span class="btn-icon-left text-danger">
+                                    <i class="fa fa-times"></i>
+                                </span>Cancelar
+                            </button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Cargar -->
+
+    <!-- Modal Nuevo Producto -->
+    <div class="modal fade" id="nuevoproducto">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Código del Producto">                                                                        
+                        </div>
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Nombre del Producto">                                                                        
+                        </div>
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Descripción del Producto">
+                        </div>                        
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Valor/Precio/Venta">
+                        </div>  
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Valor/Precio/Compra">
+                        </div>                       
+                    </div>
+
+                    <div class="form-group row">                                                   
+                        <div class="col-sm-6 mt-2 mt-sm-2">                                 
+                            <div class="custom-control custom-checkbox mb-3 checkbox-success check-lg mt-2 mt-sm-2">
+                                <input type="checkbox" class="custom-control-input mt-2 mt-sm-2" checked id="customCheckBox8" required>
+                                <label class="custom-control-label mt-2 mt-sm-2" for="customCheckBox8">&nbsp;&nbsp; Afecto isc</label>
+                            </div>                    
+                        </div>
+                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Unidad de Medida</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select> 
+                        </div>                      
+                    </div> 
+                    <div class="form-group row"> 
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Afecto</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select> 
+                        </div>                                            
+                    </div>
+                    <div class="form-group row"> 
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Tipo de Moneda</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select> 
+                        </div>                                                  
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Descripción del Producto Sunat">
+                        </div>                        
+                    </div>
+                    
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confimarnp">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Nuevo Producto -->
+
+     <!-- Modal Confirmar Nuevo Producto -->
+     <div class="modal fade" id="confimarnp">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Agregar este Producto?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Confirmar Nuevo Producto -->
+
+    <!-- Modal Editar Producto -->
+    <div class="modal fade" id="editarproducto">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Código del Producto">                                                                        
+                        </div>
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Nombre del Producto">                                                                        
+                        </div>
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Descripción del Producto">
+                        </div>                        
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Valor/Precio/Venta">
+                        </div>  
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Valor/Precio/Compra">
+                        </div>                       
+                    </div>
+
+                    <div class="form-group row">                                                   
+                        <div class="col-sm-6 mt-2 mt-sm-2">                                 
+                            <div class="custom-control custom-checkbox mb-3 checkbox-success check-lg mt-2 mt-sm-2">
+                                <input type="checkbox" class="custom-control-input mt-2 mt-sm-2" checked id="customCheckBox8" required>
+                                <label class="custom-control-label mt-2 mt-sm-2" for="customCheckBox8">&nbsp;&nbsp; Afecto isc</label>
+                            </div>                    
+                        </div>
+                        
+                        <div class="col-sm-6 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Unidad de Medida</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select> 
+                        </div>                      
+                    </div> 
+                    <div class="form-group row"> 
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Afecto</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select> 
+                        </div>                                            
+                    </div>
+                    <div class="form-group row"> 
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <select class="form-control default-select" id="sel1">
+                                <option selected>Tipo de Moneda</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                            </select> 
+                        </div>                                                  
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12 mt-2 mt-sm-2">
+                            <input class="form-control" type="text" placeholder="Descripción del Producto Sunat">
+                        </div>                        
+                    </div>
+                    
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confimarednp">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Nuevo Producto -->
+
+     <!-- Modal Confirmar Editar Producto -->
+     <div class="modal fade" id="confimarednp">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Editar este Producto?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Confirmar Editar Producto -->
+
+     <!-- Modal Confirmar Editar Producto -->
+     <div class="modal fade" id="eliminarp">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Eliminar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Eliminar este Producto?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Confirmar Editar Producto -->
+
+</div>
