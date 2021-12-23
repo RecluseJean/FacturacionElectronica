@@ -8,12 +8,9 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from './pages/components/components.module';
 //Signin
 import { SignInModule } from './pages/sign-in/sign-in.module';
-//Password
-import { PasswordModule } from './pages/password/password.module';
 //Dashboard
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { SignUpModule } from './pages/sign-up/sign-up.module';
-
 
 @NgModule({
   declarations: [
@@ -24,7 +21,6 @@ import { SignUpModule } from './pages/sign-up/sign-up.module';
     BrowserModule,
     SignInModule,
     DashboardModule,
-    PasswordModule,
     AppRoutingModule,
 
     ComponentsModule,

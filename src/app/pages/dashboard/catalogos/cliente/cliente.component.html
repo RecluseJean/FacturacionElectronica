@@ -22,435 +22,82 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <div class="col-sm-3 mt-2 mt-sm-2">
-                    <div class="input-group mb-2 diet-search col-sm-12">
-                        <input type="text" class="form-control" placeholder="Buscar Aquí...">
-                        <div class="input-group-append">
-                            <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <form>  
+                    <div class="form-row">
+                        <div class="col-sm-3 mt-2 mt-sm-2">
+                            <div class="input-group mb-2 diet-search col-sm-12">
+                                <input type="text" class="form-control" placeholder="Buscar Aquí...">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div> 
                         </div>
-                    </div> 
-                </div>
 
-                <div class="col-sm-3 mt-2 mt-sm-2">
-                    <select class="form-control default-select" id="sel1" disabled>
-                        <option selected disabled>Luguer Asociados</option>                                                                
-                    </select>   
-                </div>                  
-                <div class="col-sm-2 mt-2 mt-sm-2">
-                    <button type="button" class="btn btn-rounded btn-success col-sm-12" data-toggle="modal" data-target="#nuevocliente">
-                        <span class="btn-icon-left text-success">
-                            <i class="fa fa-user-plus"></i>
-                        </span>Crear
-                    </button>                    
-                </div>        
-                <div class="col-sm-2 mt-2 mt-sm-2">
-                    <button type="button" class="btn btn-rounded btn-primary col-sm-12" data-toggle="modal" data-target="#cargarc">
-                        <span class="btn-icon-left text-primary">
-                            <i class="fa fa-cloud-upload"></i>
-                        </span>Cargar
-                    </button>     
-                </div>  
-                <div class="mt-2 mt-sm-2">
-                    <button type="button" class="btn btn-rounded btn-secondary col-sm-12">
-                        <span class="btn-icon-left text-secondary">
-                            <i class="fa fa-cloud-download"></i>
-                        </span>Reportes
-                    </button>                    
-                </div> 
+                        <div class="col-sm-3 mt-2 mt-sm-2">
+                            <select class="form-control default-select col-sm-12" id="sel1" disabled>
+                                <option selected disabled>Luguer Asociados</option>                                                                
+                            </select>   
+                        </div>                        
+
+                        <div class="col-sm-3 mt-2 mt-sm-2">
+                            <a type="button" class="btn btn-info col-sm-12">Crear Documento <span
+                                class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                            </a> 
+                        </div> 
+                                
+                        <div class="col-sm-3 mt-2 mt-sm-2">
+                            <button type="button" class="btn btn-info">Exportar <span
+                                class="btn-icon-right"><i class="fa fa-cloud-download"></i></span>
+                            </button> 
+                        </div>   
+
+                        
+                        
+                    </div>
+                </form>      
             </div>
             <div class="card-body">
                 <div class="table-responsive table-hover">
                     <table class="table">
                         <thead class="thead-info">
                             <tr>
-                                <th scope="col">Razon Social</th>
-                                <th scope="col">Tipo Documento</th>
-                                <th scope="col">Número Documento</th>
-                                <th scope="col">Dirección</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Celular</th>
-                                <th scope="col">Telf. Fijo</th>
-                                <th scope="col">Acciones</th>                              
+                                <th scope="col">Fecha emisión</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Serio-Número</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Moneda</th>
+                                <th scope="col">T.Gravada</th>
+                                <th scope="col">T.IGV</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Descargas</th>
+                                <th scope="col">Consultar Estado</th>
+                                <th scope="col">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th>S.A.C.</th>
-                                <td>Tipo</td>
-                                <td>65656565656</td>
-                                <td>Av. los aviadores</td>
-                                <td>empresa@gmail.com</td>
-                                <td>985959595</td>
-                                <td>6262633</td>                            
+                                <th>1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <th>1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
 
                                 <td>
                                     <div class="d-flex">
-                                        <a class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="modal" data-target="#editarcliente"><i class="fa fa-pencil"></i></a>
-                                        <a class="btn btn-danger shadow btn-xs sharp" data-toggle="modal" data-target="#confeliminarcli"><i class="fa fa-trash"></i></a>
+                                        <a class="btn btn-primary shadow btn-xs sharp mr-1" routerLink="/dashboard/ingresos/percepcion/editar-percepcion"><i class="fa fa-pencil"></i></a>
+                                        <a class="btn btn-danger shadow btn-xs sharp" data-toggle="modal" data-target="#elimarc"><i class="fa fa-trash"></i></a>
                                     </div>
                                 </td>
-                            </tr>
-                            
+                            </tr>                            
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Modal Nuevo Cliente -->
-    <div class="modal fade" id="nuevocliente">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Nuevo Cliente</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group row">
-                        <div class="col-sm-6 mt-2 mt-sm-2 text-right">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
-                                <label class="form-check-label">
-                                    Nacional
-                                </label>
-                            </div>  
-                        </div>  
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" value="option2">
-                                <label class="form-check-label">
-                                    Extranjero
-                                </label>
-                            </div>   
-                        </div> 
-                    </div> 
-
-                    <div class="form-group row">                        
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <select class="form-control default-select" id="sel1">
-                                <option selected>Tipo de Documento</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                            </select>                                                                        
-                        </div>
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="RUC/DNI">                                                                        
-                        </div>
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-12 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Razón Social">
-                        </div>                        
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Razón Comercial">
-                        </div>  
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Cuenta Detracción">
-                        </div>                       
-                    </div>
-                    <!--Solo si es Nacional-->
-                    <div class="form-group row">                        
-                        <div class="col-sm-4 mt-2 mt-sm-2">
-                            <select class="form-control default-select" id="sel1">
-                                <option selected>Departamento</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                            </select> 
-                        </div>  
-                        <div class="col-sm-4 mt-2 mt-sm-2">
-                            <select class="form-control default-select" id="sel1">
-                                <option selected>Provincia</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                            </select>                         
-                        </div>    
-                        <div class="col-sm-4 mt-2 mt-sm-2">
-                            <select class="form-control default-select" id="sel1">
-                                <option selected>Distrito</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                            </select>                         
-                        </div>                   
-                    </div>
-                    <!--Fin Solo si es Nacional-->
-                    
-                    <div class="form-group row">                        
-                        <div class="col-sm-12 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Dirección Fiscal">
-                        </div>                        
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-12 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Dirección Fiscal 2">
-                        </div>                        
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-12 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Dirección Fiscal 3">
-                        </div>                        
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="email" placeholder="Email">
-                        </div>  
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Condición" disabled>
-                        </div>                       
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="number" placeholder="Tel. Fijo">
-                        </div>  
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="number" placeholder="Num. Celular">
-                        </div>                       
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-12 mt-2 mt-sm-2">
-                            <input class="form-control" type="password" placeholder="Contraseña para consulta">
-                        </div>                        
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmacli">Aceptar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fin Modal Nuevo Cliente -->
-
-    <!-- Modal Confirmar Nuevo Cliente -->
-    <div class="modal fade" id="confirmacli">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Confirmar</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">¿Desea Agregar este Cliente?</div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fin Modal Confirmar Nuevo Cliente -->
-
-    <!-- Modal Cargar-->
-    <div class="modal fade" id="cargarc">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Cargar Nuevo Archivo</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <h3 class="col-sm-12 mt-2 text-center">Modelo base :</h3> 
-                    <div class="col-sm-12 mt-2">
-                        <button type="button" class="btn btn-rounded btn-primary col-sm-12">
-                            <span class="btn-icon-left text-primary">
-                                <i class="fa fa-cloud-download"></i>
-                            </span>Descargar
-                        </button> 
-                    </div>       
-                        
-                    <div class="form-row">                    
-                        <div class="col-sm-6 mt-4">
-                            <button type="button" class="btn btn-rounded btn-success col-sm-12" style="overflow: hidden; position: relative;">
-                                <input class="fileInput" type="file" name="file1" accept="image/png,image/jpeg"
-                                style="cursor: pointer; height: 100%; position:absolute; top: 0; right: 0; z-index: 99; opacity: 0; -moz-opacity: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)"/>
-                                <span class="btn-icon-left text-success">
-                                    <i class="fa fa-cloud-upload"></i>
-                                </span>Subir Archivo
-                            </button>
-                        </div>
-                        <div class="col-sm-6 mt-4">
-                            <button type="button" class="btn btn-rounded btn-danger col-sm-12" data-dismiss="modal">
-                                <span class="btn-icon-left text-danger">
-                                    <i class="fa fa-times"></i>
-                                </span>Cancelar
-                            </button> 
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fin Modal Cargar -->
-
-    <!-- Modal Editar Cliente -->
-    <div class="modal fade" id="editarcliente">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Editar Cliente</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group row">
-                        <div class="col-sm-6 mt-2 mt-sm-2 text-right">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
-                                <label class="form-check-label">
-                                    Nacional
-                                </label>
-                            </div>  
-                        </div>  
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" value="option2">
-                                <label class="form-check-label">
-                                    Extranjero
-                                </label>
-                            </div>   
-                        </div> 
-                    </div> 
-
-                    <div class="form-group row">                        
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <select class="form-control default-select" id="sel1">
-                                <option selected>Tipo de Documento</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                            </select>                                                                        
-                        </div>
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="RUC/DNI">                                                                        
-                        </div>
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-12 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Razón Social">
-                        </div>                        
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Razón Comercial">
-                        </div>  
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Cuenta Detracción">
-                        </div>                       
-                    </div>
-                    <!--Solo si es Nacional-->
-                    <div class="form-group row">                        
-                        <div class="col-sm-4 mt-2 mt-sm-2">
-                            <select class="form-control default-select" id="sel1">
-                                <option selected>Departamento</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                            </select> 
-                        </div>  
-                        <div class="col-sm-4 mt-2 mt-sm-2">
-                            <select class="form-control default-select" id="sel1">
-                                <option selected>Provincia</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                            </select>                         
-                        </div>    
-                        <div class="col-sm-4 mt-2 mt-sm-2">
-                            <select class="form-control default-select" id="sel1">
-                                <option selected>Distrito</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                            </select>                         
-                        </div>                   
-                    </div>
-                    <!--Fin Solo si es Nacional-->
-                    
-                    <div class="form-group row">                        
-                        <div class="col-sm-12 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Dirección Fiscal">
-                        </div>                        
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-12 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Dirección Fiscal 2">
-                        </div>                        
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-12 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Dirección Fiscal 3">
-                        </div>                        
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="email" placeholder="Email">
-                        </div>  
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="text" placeholder="Condición" disabled>
-                        </div>                       
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="number" placeholder="Tel. Fijo">
-                        </div>  
-                        <div class="col-sm-6 mt-2 mt-sm-2">
-                            <input class="form-control" type="number" placeholder="Num. Celular">
-                        </div>                       
-                    </div>
-                    <div class="form-group row">                        
-                        <div class="col-sm-12 mt-2 mt-sm-2">
-                            <input class="form-control" type="password" placeholder="Contraseña para consulta">
-                        </div>                        
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confireditcli">Aceptar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fin Modal Editar Cliente -->
-
-    <!-- Modal Confirmar Editar Cliente -->
-    <div class="modal fade" id="confireditcli">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Confirmar</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">¿Desea Actualizar este Cliente?</div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fin Modal Confirmar Editar Cliente -->
-
-    <!-- Modal Eliminar Cliente -->
-    <div class="modal fade" id="confeliminarcli">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Eliminar</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">¿Desea Eliminar este Cliente?</div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fin Modal Eliminar Cliente -->
 </div>
